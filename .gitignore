@@ -1,1 +1,4 @@
 *.swp
+android-support-v7-appcompat/*
+CaronaPro/bin/*
+*.log
