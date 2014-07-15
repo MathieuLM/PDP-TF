@@ -1,0 +1,39 @@
+Instalação:
+
+Baixar o último SDK de Android : http://developer.android.com/sdk/index.html
+Baixar o último Eclipse : https://www.eclipse.org/downloads/
+
+Instalar o ADT Plugin no Eclipse : http://developer.android.com/sdk/installing/installing-adt.html
+
+Abrir o Android SDK Manager no Eclipse :
+	Instalar : Última révisão de Android SDK Tools
+		   Última révisão de Android SDK Platform-Tools
+		   Última révisão de Android SDK Build-Tools
+		   Todos os components de Android 4.4.2 (API 19)
+		   Google Play Services em Extras
+
+
+Execução:
+
+Importar o projeto CaronaPro
+Importar o projeto android-support-v7-appcompat
+Criar novo projeto com o código no android-sdk-linux/extras/google/google_play_services/libproject/google-play-services_lib (Copiar no espaço de trabalho)
+
+Pôr android-support-v7-appcompat e google-play-services_lib como librarias referenciadas do projeto CaronaPro
+Se o projeto contem erros, fazer um Clean do projeto
+
+Conetar seu Device físico ao computador ou abrir o Android Virtual Device Manager no Eclipse :
+	Criar um novo Device com ao menus essas características:
+		Target: Google APIs (x86 System Image) (Google Inc.)
+		CPU/ABI: Intel Atom (x86)
+
+Executar o arquivo Server.java, se tira uma exceção, ir na tabela Classpath das configurações Run/Debug do programa Server e apagar a libraria de Android nas Bootstrap Entries
+
+Executar o projeto CaronaPro como aplicação Android, pode demorar antes que o emulator seja visível. Se a execução da aplicação tira uma exeção de tipo Timeout, só tenta de executar-lha de novo. Para bem ver a distribuição dos dados entre os clientes, é melhor de executar dois Devices ao mesmo tempo.
+
+
+Funcionamento:
+
+O jeito de mudar no mapa é o mesmo que com o Google Map.
+Apoiar no mapa para criar Marker, apoiar Cancelar para retirar o Marker e apoiar Salvar para salvar o ponto de carona. 
+Apoiar sobre um Marker já existente para recomendar-lo ou não.
